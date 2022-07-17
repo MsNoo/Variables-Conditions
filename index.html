@@ -334,7 +334,7 @@
 
             if ((secondsR + extraSeconds) >= 60) {
                 newSeconds = (secondsR + extraSeconds) % 59;
-                console.log("New seconds: " + newSeconds);
+                console.log("Seconds: " + newSeconds);
 
                 kiekPersikelia = (extraSeconds + secondsR - newSeconds);
                 console.log("Extra seconds : " + kiekPersikelia);
@@ -342,14 +342,14 @@
 
                 if ((minutesR + kiekPersikelia) >= 60) {
                     newMinutes = (minutesR + kiekPersikelia) % 59;
-                    console.log("New minutes: " + newMinutes);
+                    console.log("Minutes: " + newMinutes);
                     kiekPersikelia2 = (kiekPersikelia + minutesR - newMinutes);
                     console.log("Extra minutes : " + kiekPersikelia2);
                     minutesR = newMinutes;
 
                     if ((hoursR + kiekPersikelia2) >= 24) {
                         newHours = (hoursR + kiekPersikelia2) % 24;
-                        console.log("New Hours: " + newHours);
+                        console.log("Hours: " + newHours);
                         kiekPersikelia3 = (kiekPersikelia2 + hoursR - newHours) / 24;
                         console.log("NEW DAYS: " + kiekPersikelia3);
                         hoursR = newHours;

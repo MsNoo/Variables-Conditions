@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kintamieji ir Salygos</title>
+</head>
+
+<body>
+
+    <script>
+
+        function FirstTask() {
+
+            console.log("-------------------");
+            console.log("First Task");
+            let name = "Ms";
+            let surname = "Noo";
+            let birthDate = 1982;
+            let presentYear = 2022;
+            let age = presentYear - birthDate;
+            console.log("As esu " + name + " " + surname + ". Man yra " + age + " metai(-u)");
+        }
+
+        function SecondTask() {
+
+            console.log("");
+            console.log("-------------------");
+            console.log("Second Task");
+            let no1 = (Math.random() * 4);
+            let no2 = (Math.random() * 4);
+            let no1R = Math.round(no1);
+            let no2R = Math.round(no2);
+
+            console.log("Number 1 with float: " + no1);
+            console.log("Number 2 with float: " + no2);
+            console.log("Number 1 rounded: " + no1R);
+            console.log("Number 2 rounded: " + no2R);
+            let result;
+
+            // TOO COMPLICATED
+            // if (number1Rounded >= number2Rounded) {
+            //     if (number2Rounded == 0) {
+            //         console.log("Dalyba is 0 negalima");
+            //     }
+            //     else{
+            //         result = number1Rounded / number2Rounded;
+            //     }
+            // }
+            // else {
+            //     if (number1Rounded == 0) {
+            //         console.log("Dalyba is 0 negalima");
+            //     }
+            //     else {
+            //         result = number2Rounded / number1Rounded;
+            //     }
+            // }
+
+            if (no1R != 0 && no2R != 0) {
+                if (no1R >= no2R) {
+                    result = no1R / no2R;
+                }
+                if (no2R >= no1R) {
+                    result = no2R / no1R;
+                }
+                console.log("Division result: " + result);
+            }
+            else {
+                console.log("Dalyba is 0 negalima");
+            }
+        }
+
+        function ThirdTask() {
+
+            console.log("");
+            console.log("-------------------");
+            console.log("Third Task");
+            // BUTINAI: apvalinimas floor arba ceil
+            let no1 = (Math.random() * 26); //0.9999999
+            let no2 = (Math.random() * 26);
+            let no3 = (Math.random() * 25);
+            let no1R = Math.floor(no1);
+            let no2R = Math.floor(no2);
+            let no3R = Math.round(no3);
+            let result;
+            console.log("Number 1 with float: " + no1);
+            console.log("Number 2 with float: " + no2);
+            console.log("Number 3 with float: " + no3);
+            console.log("Number 1 rounded: " + no1R);
+            console.log("Number 2 rounded: " + no2R);
+            console.log("Number 3 rounded: " + no3R);
+
+            if ((no1R >= no2R && no1R <= no3R) ||
+                (no1R <= no2R && no1R >= no3R)) {
+                result = no1R;
+            }
+            else if ((no2R >= no1R && no2R <= no3R) ||
+                (no2R <= no1 && no2R >= no3R)) {
+                result = no2R;
+            }
+            else {
+                result = no3R;
+            }
+            console.log("Middle value: " + result);
+        }
+
+        function FourthTask() {
+            console.log("");
+            console.log("-------------------");
+            console.log("Fourth Task");
+
+            let a = (Math.floor((Math.random() * 10)));
+            let b = (Math.floor((Math.random() * 10)));
+            let c = (Math.floor(Math.random() * 10));
+            console.log("a value: " + a);
+            console.log("b value: " + b);
+            console.log("c value: " + c);
+
+            if (((a + b) > c) &&
+                ((a + c) > b) &&
+                ((b + c) > a)) {
+                console.log("Answer: Triangle");
+            }
+            else {
+                console.log("Answer: Not triangle");
+            }
+        }
+
+        function FifthTask() {
+            console.log("");
+            console.log("-------------------");
+            console.log("Fifth Task");
+
+            let no1 = Math.floor(Math.random() * 3);
+            let no2 = Math.floor(Math.random() * 3);
+            let no3 = Math.floor(Math.random() * 3);
+            let no4 = Math.floor(Math.random() * 3);
+            let total0 = 0;
+            let total1 = 0;
+            let total2 = 0;
+
+            console.log(no1);
+            console.log(no2);
+            console.log(no3);
+            console.log(no4);
+
+            if (no1 == 0) {
+                total0++;
+            }
+            if (no2 == 0) {
+                total0++;
+            }
+            if (no3 == 0) {
+                total0++;
+            }
+            if (no4 == 0) {
+                total0++;
+            }
+            if (no1 == 1) {
+                total1++;
+            }
+            if (no2 == 1) {
+                total1++;
+            }
+            if (no3 == 1) {
+                total1++;
+            }
+            if (no4 == 1) {
+                total1++;
+            }
+            if (no1 == 2) {
+                total2++;
+            }
+            if (no2 == 2) {
+                total2++;
+            }
+            if (no3 == 2) {
+                total2++;
+            }
+            if (no4 == 2) {
+                total2++;
+            }
+
+            console.log("Total 0: " + total0);
+            console.log("Total 1: " + total1);
+            console.log("Total 2: " + total2);
+        }
+
+        function SixthTask() {
+            console.log("");
+            console.log("-------------------");
+            console.log("Sixth Task");
+
+            let no1 = Math.floor(Math.random() * 21 - 10);
+            let no2 = Math.floor(Math.random() * 21 - 10);
+            let no3 = Math.floor(Math.random() * 21 - 10);
+
+            if (no1 < 0) {
+                console.log("Number 1: [" + no1 + "]");
+            }
+            else {
+                console.log("Number 1: {" + no1 + "}");
+            }
+            if (no2 < 0) {
+                console.log("Number 2: [" + no2 + "]");
+            }
+            else {
+                console.log("Number 2: {" + no2 + "}");
+            }
+            if (no3 < 0) {
+                console.log("Number 3: [" + no3 + "]");
+            }
+            else {
+                console.log("Number 3: {" + no3 + "}");
+            }
+        }
+
+        function SeventhTask() {
+            console.log("");
+            console.log("-------------------");
+            console.log("Seventh Task");
+
+            let candleTot = Math.floor(Math.random() * 2996 + 5);
+            let startingPrice = candleTot * 1;
+            let price3 = startingPrice - (startingPrice * 0.03);
+            let price4 = startingPrice - (startingPrice * 0.04);
+
+            console.log("Amount of candles: " + candleTot);
+            if (startingPrice <= 1000) {
+                console.log("Candles: " + candleTot + ". Price: " + startingPrice + " Eur");
+            }
+            else if (startingPrice > 1000 && startingPrice <= 2000) {
+                console.log("Candles: " + candleTot + ". Price: " + price3 + " Eur");
+            }
+            else {
+                console.log("Candles: " + candleTot + ". Price: " + price4 + " Eur");
+            }
+        }
+
+        function EighthTask() {
+            console.log("");
+            console.log("-------------------");
+            console.log("Eighth Task");
+
+            let status = 0;
+            let no1;
+            let no2;
+            let no3;
+            let result2;
+            let result1;
+            let result1R;
+            let result2R;
+
+            no1 = Math.floor(Math.random() * 101);
+            no2 = Math.floor(Math.random() * 101);
+            no3 = Math.floor(Math.random() * 101);
+            result1 = ((no1 + no2 + no3) / 3);
+            result1R = Math.round(result1);
+
+            console.log("Number 1: " + no1);
+            console.log("Number 2: " + no2);
+            console.log("Number 3: " + no3);
+            console.log("First result: " + result1R);
+
+            if (no1 < 10) {
+                no1 = 0;
+                status++;
+            }
+            if (no2 < 10) {
+                no2 = 0;
+                status++;
+            }
+            if (no3 < 10) {
+                no3 = 0;
+                status++;
+            }
+            if (no1 > 90) {
+                no1 = 0;
+                status++;
+            }
+            if (no2 > 90) {
+                no2 = 0;
+                status++;
+            }
+            if (no3 > 90) {
+                no3 = 0;
+                status++;
+            }
+
+            console.log("Numbers not to count: " + status);
+            result2 = ((no1 + no2 + no3) / (3 - status));
+            result2R = Math.round(result2);
+            console.log("Second result: " + result2R);
+        }
+
+        function NinthTask() {
+            console.log("");
+            console.log("-------------------");
+            console.log("Ninth Task");
+
+            let hours;
+            let minutes;
+            let seconds;
+            let newHours;
+            let newMinutes;
+            let newSeconds;
+            let hoursR;
+            let minutesR;
+            let secondsR;
+            let extraSeconds;
+            let extraSecondsR;
+            let kiekPersikelia;
+            let kiekPersikelia2;
+            let kiekPersikelia3;
+
+            hours = Math.floor(Math.random() * 24);
+            minutes = Math.floor(Math.random() * 60);
+            seconds = Math.floor(Math.random() * 60);
+            hoursR = Math.round(hours);
+            minutesR = Math.round(minutes);
+            secondsR = Math.round(seconds);
+
+            console.log("Hours: " + hoursR);
+            console.log("Minutes: " + minutesR);
+            console.log("Seconds: " + secondsR);
+            console.log("...............");
+            console.log("CLOCK " + hoursR + ":" + minutesR + ":" + secondsR);
+            console.log("...............");
+            extraSeconds = Math.floor(Math.random() * 301);
+            extraSecondsR = Math.round(extraSeconds);
+            console.log("Extra seconds: " + extraSecondsR);
+
+            if ((secondsR + extraSeconds) >= 60) {
+                newSeconds = (secondsR + extraSeconds) % 59;
+                console.log("New seconds: " + newSeconds);
+
+                kiekPersikelia = (extraSeconds + secondsR - newSeconds);
+                console.log("Extra seconds : " + kiekPersikelia);
+                secondsR = newSeconds;
+
+                if ((minutesR + kiekPersikelia) >= 60) {
+                    newMinutes = (minutesR + kiekPersikelia) % 59;
+                    console.log("New minutes: " + newMinutes);
+                    kiekPersikelia2 = (kiekPersikelia + minutesR - newMinutes);
+                    console.log("Extra minutes : " + kiekPersikelia2);
+                    minutesR = newMinutes;
+
+                    if ((hoursR + kiekPersikelia2) >= 24) {
+                        newHours = (hoursR + kiekPersikelia2) % 24;
+                        console.log("New Hours: " + newHours);
+                        kiekPersikelia3 = (kiekPersikelia2 + hoursR - newHours) / 24;
+                        console.log("NEW DAYS: " + kiekPersikelia3);
+                        hoursR = newHours;
+                    }
+                }
+            }
+            else {
+                secondsR = secondsR + extraSecondsR;
+            }
+
+            console.log("...............");
+            console.log("CLOCK " + hoursR + ":" + minutesR + ":" + secondsR);
+            console.log("...............");
+        }
+
+        function TenthTask() {
+            console.log("");
+            console.log("-------------------");
+            console.log("Tenth Task");
+
+            let no1 = (Math.random() * 8999 + 1000);
+            let no2 = (Math.random() * 8999 + 1000);
+            let no3 = (Math.random() * 8999 + 1000);
+            let no4 = (Math.random() * 8999 + 1000);
+            let no5 = (Math.random() * 8999 + 1000);
+            let no6 = (Math.random() * 8999 + 1000);
+
+            let no1R = Math.floor(no1);
+            let no2R = Math.floor(no2);
+            let no3R = Math.floor(no3);
+            let no4R = Math.floor(no4);
+            let no5R = Math.floor(no5);
+            let no6R = Math.floor(no6);
+
+            console.log(no1R);
+            console.log(no2R);
+            console.log(no3R);
+            console.log(no4R);
+            console.log(no5R);
+            console.log(no6R);
+
+            // First round
+            if (no1R < no2R) {
+                let temp = no1R;
+                no1R = no2R;
+                no2R = temp;
+            }
+            if (no2R < no3R) {
+                let temp = no2R;
+                no2R = no3R;
+                no3R = temp;
+            }
+            if (no3R < no4R) {
+                let temp = no3R;
+                no3R = no4R;
+                no4R = temp;
+            }
+            if (no4R < no5R) {
+                let temp = no4R;
+                no4R = no5R;
+                no5R = temp;
+            }
+            if (no5R < no6R) {
+                let temp = no5R;
+                no5R = no6R;
+                no6R = temp;
+            }
+
+            // Second round
+            if (no1R < no2R) {
+                let temp = no1R;
+                no1R = no2R;
+                no2R = temp;
+            }
+            if (no2R < no3R) {
+                let temp = no2R;
+                no2R = no3R;
+                no3R = temp;
+            }
+            if (no3R < no4R) {
+                let temp = no3R;
+                no3R = no4R;
+                no4R = temp;
+            }
+            if (no4R < no5R) {
+                let temp = no4R;
+                no4R = no5R;
+                no5R = temp;
+            }
+
+            // Third round
+            if (no1R < no2R) {
+                let temp = no1R;
+                no1R = no2R;
+                no2R = temp;
+            }
+            if (no2R < no3R) {
+                let temp = no2R;
+                no2R = no3R;
+                no3R = temp;
+            }
+            if (no3R < no4R) {
+                let temp = no3R;
+                no3R = no4R;
+                no4R = temp;
+            }
+
+            // Fourth round
+            if (no1R < no2R) {
+                let temp = no1R;
+                no1R = no2R;
+                no2R = temp;
+            }
+            if (no2R < no3R) {
+                let temp = no2R;
+                no2R = no3R;
+                no3R = temp;
+            }
+
+            // Fith round
+            if (no1R < no2R) {
+                let temp = no1R;
+                no1R = no2R;
+                no2R = temp;
+            }
+
+            console.log(no1R + " " + no2R + " " + no3R + " " + no4R + " " + no5R + " " + no6R);
+        }
+
+        FirstTask();
+        SecondTask();
+        ThirdTask();
+        FourthTask();
+        FifthTask();
+        SixthTask();
+        SeventhTask();
+        EighthTask();
+        NinthTask();
+        TenthTask();
+
+    </script>
+
+</body>
+</html>

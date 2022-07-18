@@ -13,22 +13,39 @@
     <script>
 
         function FirstTask() {
-
             console.log("-------------------");
             console.log("First Task");
+            /*
+            Sukurkite 4 kintamuosius, kurie saugotų jūsų vardą, 
+            pavardę, gimimo metus ir šiuos metus (nebūtinai tikrus). 
+            Parašykite kodą, kuris pagal gimimo metus paskaičiuotų 
+            jūsų amžių ir naudodamas vardo ir pavardės kintamuosius 
+            atspausdintų tokį sakinį : "Aš esu Vardenis Pavardenis. Man yra XX metai(ų)".
+            */
+
             let name = "Ms";
             let surname = "Noo";
-            let birthDate = 1982;
+            let birthDate = 2020;
             let presentYear = 2022;
             let age = presentYear - birthDate;
             console.log("As esu " + name + " " + surname + ". Man yra " + age + " metai(-u)");
         }
 
         function SecondTask() {
-
             console.log("");
             console.log("-------------------");
             console.log("Second Task");
+
+            /*
+            Naudokite funkcija Math.random(). 
+            Sukurkite du kintamuosius ir naudodamiesi funkcija 
+            Math.random() jiems priskirkite atsitiktines reikšmes 
+            nuo 0 iki 4 (sveiki skaičiai). Didesnę reikšmę 
+            padalinkite iš mažesnės. 
+            Atspausdinkite rezultatą jį suapvalinę iki 2 skaičių 
+            po kablelio.
+            */
+
             let no1 = (Math.random() * 4);
             let no2 = (Math.random() * 4);
             let no1R = Math.round(no1);
@@ -73,11 +90,18 @@
         }
 
         function ThirdTask() {
-
             console.log("");
             console.log("-------------------");
             console.log("Third Task");
-            let no1 = (Math.random() * 26); //0 - 0.9999999
+            /*
+            Naudokite funkcija Math.random(). 
+            Sukurkite tris kintamuosius ir naudodamiesi funkcija 
+            Math.random() jiems priskirkite atsitiktines reikšmes 
+            nuo 0 iki 25 (sveiki skaičiai). Raskite ir atspausdinkite 
+            kintąmąjį turintį vidurinę reikšmę.
+            */
+
+            let no1 = (Math.random() * 26); //(nuo 0 iki 0.9999999) * 26
             let no2 = (Math.random() * 26);
             let no3 = (Math.random() * 25);
             let no1R = Math.floor(no1);
@@ -109,6 +133,13 @@
             console.log("");
             console.log("-------------------");
             console.log("Fourth Task");
+            /*
+            Įvedami skaičiai -a, b, c –kraštinių ilgiai, 
+            trys kintamieji (naudokite ​Math.random()​ funkcija nuo 
+            1 iki 10)  (sveiki skaičiai). Parašykite JavaScript 
+            programą, kuri nustatytų, ar galima sudaryti trikampį 
+            ir atsakymą atspausdintų. 
+            */
 
             let a = (Math.floor((Math.random() * 10)));
             let b = (Math.floor((Math.random() * 10)));
@@ -131,6 +162,12 @@
             console.log("");
             console.log("-------------------");
             console.log("Fifth Task");
+            /*
+            Sukurkite keturis kintamuosius ir ​Math.random()​ 
+            funkcija sugeneruokite jiems reikšmes nuo 0 iki 2  
+            (sveiki skaičiai).  Suskaičiuokite kiek yra nulių, 
+            vienetų ir dvejetų. (sprendimui masyvo nenaudoti).
+            */
 
             let no1 = Math.floor(Math.random() * 3);
             let no2 = Math.floor(Math.random() * 3);
@@ -191,6 +228,12 @@
             console.log("");
             console.log("-------------------");
             console.log("Sixth Task");
+            /*
+            Naudokite funkcija Math.random(). 
+            Atspausdinkite 3 skaičius nuo -10 iki 10  
+            (sveiki skaičiai). Skaičiai mažesni už 0 turi būti  
+            laužtiniuose skliaustuose [], 0 -  (), didesni už 0 {}.
+            */
 
             let no1 = Math.floor(Math.random() * 21 - 10);
             let no2 = Math.floor(Math.random() * 21 - 10);
@@ -199,20 +242,31 @@
             if (no1 < 0) {
                 console.log("Number 1: [" + no1 + "]");
             }
-            else {
+            else if (no1 > 0) {
                 console.log("Number 1: {" + no1 + "}");
             }
+            else {
+                console.log("Number 1: <" + no1 + ">");
+            }
+
             if (no2 < 0) {
                 console.log("Number 2: [" + no2 + "]");
             }
-            else {
+            else if (no2 > 0) {
                 console.log("Number 2: {" + no2 + "}");
             }
+            else {
+                console.log("Number 2: <" + no2 + ">");
+            }
+
             if (no3 < 0) {
                 console.log("Number 3: [" + no3 + "]");
             }
-            else {
+            else if (no3 > 0) {
                 console.log("Number 3: {" + no3 + "}");
+            }
+            else {
+                console.log("Number 3: <" + no3 + ">");
             }
         }
 
@@ -220,6 +274,15 @@
             console.log("");
             console.log("-------------------");
             console.log("Seventh Task");
+            /*
+            Įmonė parduoda žvakes po 1 EUR. Perkant daugiau kaip 
+            už 1000 EUR taikoma 3 % nuolaida, daugiau kaip už 
+            2000 EUR - 4 % nuolaida. Parašykite programą, kuri 
+            skaičiuos žvakių kainą ir atspausdintų atsakymą kiek 
+            žvakių ir kokia kaina perkama. Žvakių kiekį generuokite 
+             Math.random()​ funkcija nuo 5 iki 3000.  
+            (sveiki skaičiai)
+            */
 
             let candleTot = Math.floor(Math.random() * 2996 + 5);
             let startingPrice = candleTot * 1;
@@ -242,6 +305,15 @@
             console.log("");
             console.log("-------------------");
             console.log("Eighth Task");
+            /*
+            Naudokite funkcija Math.random(). Sukurkite tris 
+            kintamuosius su atsitiktinėm reikšmėm nuo 0 iki 100  
+            (sveiki skaičiai). Paskaičiuokite jų aritmetinį vidurkį. 
+            Ir aritmetinį vidurkį atmetus tas reikšmes, kurios yra 
+            mažesnės nei 10 arba didesnės nei 90. Abu vidurkius 
+            atspausdinkite. Rezultatus apvalinkite iki sveiko 
+            skaičiaus.
+            */
 
             let status = 0;
             let no1;
@@ -299,6 +371,16 @@
             console.log("-------------------");
             console.log("Ninth Task");
 
+            /*
+            Padarykite skaitmeninį laikrodį, rodantį valandas, 
+            minutes ir sekundes. Valandom, minutėm ir sekundėm 
+            sugeneruoti panaudokite funkciją Math.random(). 
+            Sugeneruokite skaičių nuo 0 iki 300  (sveiki skaičiai). 
+            Tai papildomos sekundės. Skaičių pridėkite prie jau 
+            sugeneruoto laiko. Atspausdinkite laikrodį prieš ir po 
+            sekundžių pridėjimo ir pridedamų sekundžių skaičių.
+            */
+
             let hours;
             let minutes;
             let seconds;
@@ -311,12 +393,14 @@
             let hoursRP;
             let minutesRP;
             let secondsRP;
+            let days;
 
             let extraSeconds;
             let extraSecondsR;
             let kiekPersikelia;
             let kiekPersikelia2;
             let kiekPersikelia3;
+            // let newHoursR;
 
             hours = Math.floor(Math.random() * 24);
             minutes = Math.floor(Math.random() * 60);
@@ -333,88 +417,102 @@
             console.log("Minutes: " + minutesR);
             console.log("Seconds: " + secondsR);
             console.log("...............");
-            
+
             if (hoursR < 10) {
                 hoursRP = "0" + hoursR;
-                //hoursRP = hoursRP.toString();
+                // let H = hoursR.toString();
+                // hoursRP = H.slice(-2);
             }
-            else{
+            else {
                 hoursRP = hoursR;
             }
 
             if (minutesR < 10) {
                 minutesRP = "0" + minutesR;
-                //minutesRP = minutesRP.toString();
             }
-            else{
+            else {
                 minutesRP = minutesR;
             }
 
             if (secondsR < 10) {
                 secondsRP = "0" + secondsR;
-                //secondsRP = secondsRP.toString();
             }
-            else{
+            else {
                 secondsRP = secondsR;
             }
-            console.log("CLOCK " + hoursRP + ":" + minutesRP + ":" + secondsRP);
-            
+
+            console.log(hoursRP + ":" + minutesRP + ":" + secondsRP);
+
             console.log("...............");
             extraSeconds = Math.floor(Math.random() * 301);
             extraSecondsR = Math.round(extraSeconds);
-            console.log("Extra seconds: " + extraSecondsR);
+            console.log("Pridedamos sekundes: " + extraSecondsR);
 
             if ((secondsR + extraSeconds) >= 60) {
                 newSeconds = (secondsR + extraSeconds) % 60;
-                console.log("Seconds: " + newSeconds);
-
-                kiekPersikelia = (extraSeconds + secondsR - newSeconds);
-                console.log("Extra seconds 2 : " + kiekPersikelia);
+                console.log("Naujos sekundes: " + newSeconds);
+                kiekPersikelia = Math.floor((secondsR + extraSecondsR - newSeconds) / 60);
+                console.log("Prisideda minuciu : " + kiekPersikelia);
                 secondsR = newSeconds;
-
-                if ((minutesR + kiekPersikelia) >= 60) {
-                    newMinutes = (minutesR + kiekPersikelia) % 60;
-                    console.log("Minutes: " + newMinutes);
-                    kiekPersikelia2 = (kiekPersikelia + minutesR - newMinutes) / 60;
-                    console.log("Extra minutes : " + kiekPersikelia2);
-                    minutesR = newMinutes;
-
-                    if ((hoursR + kiekPersikelia2) >= 24) {
-                        newHours = (hoursR + kiekPersikelia2) % 24;
-                        console.log("Hours: " + newHours);
-                        kiekPersikelia3 = (kiekPersikelia2 + hoursR - newHours) / 24;
-                        console.log("NEW DAYS: " + kiekPersikelia3);
-                        hoursR = newHours;
-                    }
-                }
             }
             else {
                 secondsR = secondsR + extraSecondsR;
+                days = 0;
             }
 
+            if ((minutesR + kiekPersikelia) >= 60) {
+                newMinutes = (minutesR + kiekPersikelia) % 60;
+                console.log("Minutes: " + newMinutes);
+                kiekPersikelia2 = Math.floor((kiekPersikelia + minutesR - newMinutes) / 60);
+                console.log("Prisideda valandu : " + kiekPersikelia2);
+                minutesR = newMinutes;
+            }
+            else {
+                minutesR = minutesR + kiekPersikelia;
+                days = 0;
+            }
+
+            if ((hoursR + kiekPersikelia2) >= 24) {
+                newHours = (hoursR + kiekPersikelia2) % 24;
+                kiekPersikelia3 = Math.ceil(kiekPersikelia2 + hoursR - newHours) / 24;
+                days = kiekPersikelia3;
+                console.log("Hours: " + newHours);
+                hoursR = newHours;
+            }
+            else{
+                days = 0;
+            }
+ 
             if (hoursR < 10) {
                 hoursR = "0" + hoursR;
-                hoursR = hoursR.toString();
             }
 
             if (minutesR < 10) {
                 minutesR = "0" + minutesR;
-                minutesR = minutesR.toString();
             }
 
             if (secondsR < 10) {
                 secondsR = "0" + secondsR;
-                secondsR = secondsR.toString();
+            }
+            if (days < 10) {
+                days = "0" + days;
             }
 
             console.log("...............");
-            console.log("CLOCK " + hoursR + ":" + minutesR + ":" + secondsR);
+            console.log(days + ":" + hoursR + ":" + minutesR + ":" + secondsR);
         }
 
         function TenthTask() {
             console.log("");
             console.log("-------------------");
             console.log("Tenth Task");
+
+            /*
+            Naudokite funkcija Math.random(). Sugeneruokite 6 kintamuosius su 
+            atsitiktinem reikšmėm nuo 1000 iki 9999  (sveiki skaičiai). Atspausdinkite 
+            reikšmes viename strige, išrūšiuotas nuo didžiausios iki mažiausios, 
+            atskirtas tarpais. Naudoti ciklų ir masyvų NEGALIMA.
+            */
 
             let no1 = (Math.random() * 8999 + 1000);
             let no2 = (Math.random() * 8999 + 1000);
